@@ -1,0 +1,61 @@
+1. main() 
+    - call loginMainMenu
+
+2. loginMainMenu()
+    - Select from three to execute corresponding functions
+      1. Register 
+         Takes the user details as input for a new account and save changes in
+         a file [saveToFile()] named with username. 
+
+         -> saveToFile()
+            overwrites the existing content with 
+                * Username 
+                * Password 
+                * All the existing user accounts 
+            from the vector in the file.
+
+      2. Login 
+         Takes the input of the username and password and checks whether 
+         the given password is correct or not by loading the details from 
+         the file [loadFromFile()]. If correct it calls mainMenu(). Else it 
+         displays an error message.
+
+         -> loadFromFile() 
+            gets
+                * Password
+                * All the existing user accounts from  
+            from the file to the vector.
+
+         -> mainMenu() 
+            a. addUser
+               * Takes
+                   - username 
+                   - password 
+                   - account name 
+               * Gives suggestions for password strength [passwordCheck()]
+               * if account name is gmail or email, checks whether the username is in proper format
+               * if not adds the user directly
+            b. deleteUser
+               * Takes user name 
+               * Deletes the user if he is already present in the list users and save the file 
+               * Otherwise, it displays that user is not found
+            c. updateUser
+               * Takes user name 
+               * Loops over the list of users and updates the password as per our requirement 
+               * If the user is not found, it tells it.
+            d. displayUsers
+               * Loops over the list of users and print ther user accounts details(username, password and account name)
+               * Uses a custom "cout" to print the user details which is overloaded
+               * Otherwise it tells us if the database is empty 
+            e. searchUser
+               * Takes username as input.
+               * Checks if it exists in the list. 
+               * If not, it tells that User not found. 
+            f. logout
+               * Sets current sessions username, password to "" and clears the list of users.
+               * Prints Logged out successfully.
+
+      3. Exit
+         Exits from the program. 
+
+
