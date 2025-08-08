@@ -68,7 +68,7 @@ g++ -std=c++17 PasswordManager.cpp -o PasswordManager
 
 ## 👤 Author
 
-Created by [Lalitendra].  
+Created by Lalitendra.  
 
 **Happy password managing!** 😊🔑
 
